@@ -148,6 +148,8 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
             AppsFlyerLib.getInstance().setPluginDeepLinkData(intent);
         }
 
+		instance.setHost("appvodacom", "whappsflyer.com");
+
         trackAppLaunch();
         instance.startTracking(application, devKey);
 

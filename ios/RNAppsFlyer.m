@@ -215,7 +215,8 @@ RCT_EXPORT_METHOD(setUserEmails: (NSDictionary*)options
         if(isConversionData == YES){
             [AppsFlyerTracker sharedTracker].delegate = self;
         }
-        
+       
+	    [[AppsFlyerTracker sharedTracker] setHost: @"whappsflyer.com" withHostPrefix: @"appvodacom"];	
         [AppsFlyerTracker sharedTracker].appleAppID = appId;
         [AppsFlyerTracker sharedTracker].appsFlyerDevKey = devKey;
         [AppsFlyerTracker sharedTracker].isDebug = isDebug;
